@@ -1,6 +1,5 @@
 import static functions.ReadMe1Functions.*;
 import static functions.ReadMe2Functions.getMaxPair;
-import static functions.ReadMe2Functions.pairCountAndSingletonsLeft;
 
 public class Application {
     public static void main(String[] args) {
@@ -20,3 +19,4 @@ public class Application {
     }
 
 }
+

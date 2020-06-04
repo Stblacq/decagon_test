@@ -3,8 +3,6 @@ package functions;
 import org.apache.commons.lang3.ArrayUtils;
 import utils.PairSingletonResult;
 
-import java.util.Arrays;
-
 import static org.apache.commons.lang3.math.NumberUtils.min;
 
 public class ReadMe2Functions {

@@ -3,7 +3,6 @@ package functions;
 import pojos.User;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static pojos.User.compareByCommentCount;
@@ -14,7 +13,7 @@ public class ReadMe1Functions {
 
     public static List<String> getUsernames(int threshold) throws Exception{
         List<User> users = getAllUsers();
-        List<String> activeUsernames = new ArrayList<String>();
+        List<String> activeUsernames = new ArrayList<>();
         if (users != null){
         for (User user: users) {
             int activity = user.getComment_count()+user.getSubmitted();
@@ -30,15 +29,15 @@ public class ReadMe1Functions {
     public static String getUsernameWithHighestCommentCount()throws Exception{
         List<User> users = getAllUsers();
         assert users != null;
-        Collections.sort(users,compareByCommentCount);
+        users.sort(compareByCommentCount);
         return users.get(users.size()-1).getUsername();
     }
 
     public static List<String> getUsernamesSortedByRecordDate(int threshold) throws Exception{
         List<User> users = getAllUsers();
         assert users != null;
-        Collections.sort(users,compareByRecordDate);
-        List<String> usernames = new ArrayList<String>();
+        users.sort(compareByRecordDate);
+        List<String> usernames = new ArrayList<>();
         for (User user: users) {
            if (user.getCreated_at()>= (long) threshold){
                usernames.add(user.getUsername());

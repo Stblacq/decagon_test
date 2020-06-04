@@ -30,7 +30,7 @@ public class ApiCallsUtils {
 	public static List<User> getAllUsers() throws Exception {
 		ArticleUserResponsePojo initial_response = fetchArticleUser("1");
 		if (initial_response != null) {
-			List<User> users = new ArrayList<User>(initial_response.getData());
+			List<User> users = new ArrayList<>(initial_response.getData());
 			Integer page_number = initial_response.getTotal_pages();
 			for (int i = 1; i < page_number; i++) {
 				int current_page = i + 1;
